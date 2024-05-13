@@ -1,7 +1,6 @@
 ![berberosmd](https://github.com/Sulaimannabdul/KerberossianCracker/assets/151133481/4ad656be-6a95-464f-8d64-6939a210d6b0)
 
 ### KerberossianCracker | Kerberos Constrained Delegation
-Guardian of the Greek underworld, kerberos attack
 
 If you have compromised a user account or a computer (machine account) that has kerberos constrained delegation enabled, it's possible to impersonate any domain user (including administrator) and authenticate to a service that the user account is trusted to delegate to.
 
