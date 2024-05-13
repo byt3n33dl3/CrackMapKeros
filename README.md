@@ -2,7 +2,8 @@
 
 ### KerberossianCracker | Kerberos Constrained Delegation
 
-If you have compromised a user account or a computer (machine account) that has kerberos constrained delegation enabled, it's possible to impersonate any domain user (including administrator) and authenticate to a service that the user account is trusted to delegate to.
+
+If you have ```compromised a user account``` or a computer (machine account) that has kerberos constrained delegation enabled, it's possible to impersonate any domain user (including administrator) and authenticate to a service that the user account is trusted to delegate to.
 
 ## Domain Compromise via DC Print Server and Kerberos Delegation
 
@@ -18,7 +19,7 @@ This lab demonstrates an attack on Active Directory Domain Controller (or any ot
 This lab builds on `Domain Compromise via Unrestricted Kerberos Delegation`
 <hr>
 
-### Execution (referenced from: RTT)
+#### Execution (referenced from: RTT)
 
 Our environment for this lab is:
 
@@ -28,5 +29,14 @@ Our environment for this lab is:
 We can check if a spool service is running on a remote host like so:
 If the spoolss was not running, we would receive an error.
 The above clearly shows the attack was successful and an NTLM hash for the user spotless got retrieved -  get cracking or passing it now.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+KerberosPublicKeyInfo ::= SEQUENCE {
+        ap_ticket    [0] EXPLICIT Ticket,
+        tgs_ticket   [1] EXPLICIT Ticket OPTIONAL,
+        tgs_seskey   [2] EXPLICIT EncryptionKey OPTIONAL
+        ...
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #### ***Credit to some UADC and Crackmapexec***
